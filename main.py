@@ -2,6 +2,7 @@ from vosk import Model, KaldiRecognizer
 import os
 import pyaudio
 import pyttsx3
+import json
 
 
 # Speech Synthesis model
@@ -28,7 +29,12 @@ while True:
     if len(data) == 0:
         break
     if rec.AcceptWaveform(data):
-        text = rec.Result()
+        #result is a string
+        result = rec.Result()
         
-        print(text)
-        speak(text)
+        #convet it to a json/dictionary
+        result = json.loads(result)
+        print(result['text'])
+        
+        
+        speak(result['text'])
