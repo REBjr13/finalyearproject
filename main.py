@@ -37,7 +37,9 @@ while True:
         
         #convet it to a json/dictionary
         result = json.loads(result)
+        text = result['text']
+        
         print(result['text'])
         
-        
-        speak(result['text'])
+        if text == 'what is time' or text == 'tell me the time':
+            speak(SystemInfo.get_time())
