@@ -5,6 +5,9 @@ import pyttsx3
 import json
 
 
+#import core lib 
+from core import SystemInfo
+
 # Speech Synthesis model
 engine = pyttsx3.init()
 
@@ -15,9 +18,9 @@ def speak(text):
 
 
 #Speech Recognition model
-
 model = Model("model")
 rec = KaldiRecognizer(model, 16000)
+
 
 #opens microphone for listening
 p = pyaudio.PyAudio()
