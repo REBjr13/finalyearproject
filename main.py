@@ -11,7 +11,7 @@ from core import SystemInfo
 # Speech Synthesis model
 engine = pyttsx3.init()
 
-
+ 
 def speak(text):
     engine.say(text)
     engine.runAndWait()
