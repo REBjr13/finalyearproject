@@ -1,7 +1,37 @@
 commands:
   # Time commands
   - command:
-    input: [What time is?, Tell me the time., What is the time?, Time.]
+    input: What time is?
     entity: time
     action: getTime
-  
+    - command:
+    input: Tell me the time.
+    entity: time
+    action: getTime
+    #Date commands
+    - command:
+    input: What date is it?
+    entity: time
+    action: getDate
+    - command:
+    input: Tell me the date.
+    entity: time
+    action: getTime
+    #Year commands
+    - command:
+    input: What year is it?
+    entity: time
+    action: getYear
+    - command:
+    input: Tell me year is.
+    entity: time
+    action: getYear
+    #weather commands
+    - command:
+    input: What is the weather?
+    entity: time
+    action: getWeather
+    - command:
+    input: What's the weather?
+    entity: time
+    action: getWeather
